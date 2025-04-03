@@ -1,6 +1,5 @@
 
-        
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,8 +26,11 @@
             top: 50px;
             left: -100%;
             animation: slide 10s linear infinite; /* Move the banner left to right */
+            display: flex;
+            align-items: center;
         }
 
+        /* Keyframe animation for the sliding effect */
         @keyframes slide {
             0% {
                 left: -100%;
@@ -42,6 +44,12 @@
             font-size: 30px;
             color: #333;
             margin-top: 20px;
+        }
+
+        /* Styling for the food emojis in the banner */
+        .food-emojis {
+            font-size: 50px;  /* Adjust size as needed */
+            margin-right: 20px;
         }
 
         /* Image container styling */
@@ -58,12 +66,15 @@
             max-width: 100%;
             border-radius: 10px;
         }
-
     </style>
 </head>
 <body>
 
     <div class="banner">
+        <!-- Food emojis in the banner -->
+        <div class="food-emojis">
+            🍕🍔🍟🌮🍣🍩🍦🍪🍉🍇🍓
+        </div>
         Sorry, <span id="name"></span>!
     </div>
 
@@ -87,3 +98,5 @@
 
 </body>
 </html>
+
+    
