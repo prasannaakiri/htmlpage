@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            padding-top: 50px;
+        }
+        .banner {
+            background-color: #ff4c4c;
+            color: white;
+            font-size: 40px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .name {
+            font-size: 30px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        Sorry, <span id="name"></span>!
+    </div>
+
+    <div class="name">
+        We couldn't complete the action.
+    </div>
+
+    <script>
+        // Get the URL parameter "name"
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name') || 'Friend'; // Default to 'Friend' if no name is given
+
+        // Update the name in the banner
+        document.getElementById('name').textContent = name;
+    </script>
+
+</body>
+</html>
