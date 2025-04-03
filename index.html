@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+        
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,27 +12,53 @@
             text-align: center;
             background-color: #f3f3f3;
             padding-top: 50px;
+            margin: 0;
         }
+
+        /* Banner animation from left to right */
         .banner {
             background-color: #ff4c4c;
             color: white;
             font-size: 40px;
             padding: 20px;
             border-radius: 5px;
+            white-space: nowrap;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            animation: slide 10s linear infinite; /* Move the banner left to right */
         }
+
+        @keyframes slide {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
         .name {
             font-size: 30px;
             color: #333;
             margin-top: 20px;
         }
+
+        /* Image container styling */
         .image-container {
             margin-top: 30px;
+            max-width: 100%;
         }
+
+        /* Image styling to fit the screen */
         .image-container img {
-            width: 80%; /* Adjust the width as needed */
-            max-width: 800px;
+            width: 100%; /* Make the image fit the screen width */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            max-width: 100%;
             border-radius: 10px;
         }
+
     </style>
 </head>
 <body>
